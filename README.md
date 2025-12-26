@@ -12,7 +12,7 @@ A production-grade evaluation framework for Model-Graded Assessment. Ensures LLM
 - **CI/CD Ready:** Integrated with GitHub Actions for automated quality gates.
 
 ## Prerequisites
-This project requires [uv](https://astral.sh/uv) and `make`.
+This project requires [uv](https://astral.sh/uv), `make`, and Docker (optional).
 
 ## Usage
 
