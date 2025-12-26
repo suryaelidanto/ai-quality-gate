@@ -7,19 +7,24 @@ A production-grade evaluation framework for Model-Graded Assessment. Ensures LLM
 - **Async Test Suite:** High-performance evaluation powered by `DeepEval` & `pytest-asyncio`.
 - **CI/CD Ready:** Integrated with GitHub Actions for automated quality gates.
 
+## Prerequisites
+This project requires [uv](https://astral.sh/uv) and `make`.
+
 ## Usage
 
 ### Local Development
 ```bash
-make install
-make test
-make lint
+make install # Setup env
+make test    # Run AI Evals
+make lint    # Check code quality
 ```
 
-### Docker (Isolated Env)
+### Docker Execution
+Run the full evaluation suite in an isolated Linux container:
 ```bash
 make up
 ```
+
 
 ## Example Analysis
 Running the agent directly (`uv run main.py`):
