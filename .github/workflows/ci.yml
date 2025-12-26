@@ -1,11 +1,11 @@
-name: CI (Quality Gate)
+name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
-    branches: [main]
-  
+    branches: [ main ]
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -14,15 +14,22 @@ jobs:
 
       - name: Install uv
         uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
 
-      - name: Set up Environment
-        run: make setup
+      - name: Set up Python
+        run: uv python install 3.10
+
+      - name: Install dependencies
+        run: uv sync --frozen --no-install-project
 
       - name: Lint with ruff
+        run: uv run ruff check .
 
-        run: make lint
+      - name: Check formatting with ruff
+        run: uv run ruff format . --check
 
-      - name: Run Evals
+      - name: Run tests
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: make test
+        run: uv run pytest
