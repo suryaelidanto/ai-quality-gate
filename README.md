@@ -48,5 +48,11 @@ test_evals.py::test_safe_conversation PASSED
 ================ 3 passed in 18.26s =================
 ```
 
+## Development
+To contribute and maintain code quality, install the pre-commit hooks:
+```bash
+make dev
+```
+
 ---
 **Standard:** Async Architecture | Pydantic V2 | DeepEval

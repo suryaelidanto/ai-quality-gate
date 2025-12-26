@@ -7,6 +7,10 @@ setup:
 	uv python install
 	uv sync
 
+dev:
+	uv sync
+	uv run pre-commit install
+
 test:
 	uv run pytest
 
