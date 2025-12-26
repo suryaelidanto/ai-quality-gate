@@ -1,5 +1,9 @@
 # AI Quality Gate
 
+![CI Status](https://github.com/suryaelidanto/ai-quality-gate/actions/workflows/ci.yml/badge.svg)
+![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 A production-grade evaluation framework for Model-Graded Assessment. Ensures LLM reliability and safety before deployment.
 
 ## Core Capabilities
