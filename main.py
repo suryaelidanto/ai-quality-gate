@@ -29,6 +29,20 @@ class RiskAssessment(BaseModel):
         description="Action to take (e.g., 'Delete Message' , 'No Action')."
     )
 
+    model_config = {
+        "json_schema_extra": {
+            "examples": [
+                {
+                    "is_toxic": True,
+                    "has_pii": False,
+                    "risk_level": "critical",
+                    "explanation": "The message contains personal insults directed at the recipient.",
+                    "recommended_action": "Delete Message",
+                }
+            ]
+        }
+    }
+
 
 class WorkplaceComplianceAgent:
     def __init__(self):
