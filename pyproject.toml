@@ -1,7 +1,7 @@
 [project]
 name = "ai-quality-gate"
 version = "0.1.0"
-description = "Add your description here"
+description = "Production-grade AI evaluation framework using DeepEval and Pytest for model-graded risk assessment and compliance monitoring."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
